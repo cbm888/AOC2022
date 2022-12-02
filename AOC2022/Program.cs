@@ -18,7 +18,8 @@ foreach (string calorie in File.ReadAllLines("day1.txt"))
     }
 }
 
-var highestCalories = elves.Max(t => t.TotalCalories);
+//var highestCalories = elves.Max(t => t.TotalCalories);
 var sortElvesDescending = elves.OrderByDescending(c => c.TotalCalories).ToList();
 int topCalories3 = sortElvesDescending[0].TotalCalories + sortElvesDescending[1].TotalCalories + sortElvesDescending[2].TotalCalories;
+//Console.WriteLine(highestCalories);
 Console.WriteLine(topCalories3);
